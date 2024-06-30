@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulário </title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="formulario">
+        <div class="subtitulo">
+            Formulário Oficial para geração do valor do IPVA de Veículos da região nacional
+        </div>
+        <div>
+            <div class="subtitulo_caixas">Formulário de Veículos</div>
+            <div class="subtitulo_caixas">Preencha os campos todos os campos</div>
+        </div>
+
+        <div>
+            <div class="subtitulo_caixas" style="text-align: right; height: 280px;">
+                <div class="linhas_labels"><label>Codigo:</label></div>
+                <div class="linhas_labels"><label>Data de Fabricação:</label></div>
+                <div class="linhas_labels"><label>Cidade emplacamento:</label></div>
+                <div class="linhas_labels"><label>Situação:</label></div>
+                <div class="linhas_labels"><label>Opcionais:</label></div>
+                <div class="linhas_labels"><label>Valor FIPE:</label></div>
+                <div class="linhas_labels"><label>Modelo do veiculo:</label></div>
+                <div class="linhas_labels"><label>Fabricante do veículo:</label></div>
+                <div class="linhas_labels"><label>Valor IPVA:</label></div>
+            </div>
+            <div class="subtitulo_caixas" style="text-align: left; height: auto;height: 280px;">
+                <div class="linhas_campos"><input type="number" id="idCodigo" name="codigo" value=""></div>
+                <div class="linhas_campos"><input type="date" id="idData" name="data" value=""></div>
+                <div class="linhas_campos">
+                    <select id="idCidade" name="cidade">
+                        <option value="Selecione">Selecione</option>
+                        <option value="Passo Fundo">Passo Fundo</option>
+                        <option value="Marau">Marau</option>
+                    </select>
+                </div>
+                <div class="linhas_campos">
+                    <div id="situacao">
+                        <div style="float: left;">Sem débitos<input type="radio" id="idSemDebitos" name="documentacao"
+                                value="Pago"></div>
+                        <div style="float: left;">Com débitos<input type="radio" id="idComDebitos" name="documentacao"
+                                alt="nao_pago"></div>
+                    </div>
+                </div>
+                <div class="linhas_campos">
+                    <div style="float: left;">Ar-condicionado<input type="checkbox" id="idOpcionadoAr"
+                            name="opcionalar"></div>
+                    <div style="float: left;">Direção<input type="checkbox" id="idOpcionadoDirecao"
+                            name="opcionaDirecao"></div>
+                    <div style="float: left;">Vidros<input type="checkbox" id="idOpcionadoVidros" name="opcionaVidros">
+                    </div>
+                </div>
+                <div class="linhas_campos">
+                    <div style="float: left;"><input type="number" id="idValorFIPE" name="valorFIPE" value=""
+                            step="0.1"></div>
+                </div>
+                <div class="linhas_campos">
+                    <div style="float: left;"><input type="text" id="idModeloVeiculo" name="modeloVeiculo" value="">
+                    </div>
+                </div>
+                <div class="linhas_campos">
+                    <select id="idFabricante" name="fabricante">
+                        <option value="Selecione">Selecione</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value=" Hyundai"> Hyundai</option>
+                        <option value="Chevrolet">Chevrolet</option>
+
+                    </select>
+                </div>
+                <div class="linhas_campos">
+                    <div style="float: left;"><input type="number" id="idValorIPVA" name="valorIPVA" value="" step="0.1"
+                            disabled></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <input type="button" value="Salvar" id="btnSalvar">
+            <input type="button" value="Limpar" id="btnLimpar">
+            <input type="button" value="Editar" id="btnEditar">
+        </div>
+
+        <table id="tabelaVeiculos" border="1" style="margin: 5px;">
+            <tr>
+                <th scope="col">código</th>
+                <th scope="col">Data de Fabricação</th>
+                <th scope="col">valor do IPVA</th>
+            </tr>
+            <input type="button" id="btnAtualizar" value="Atualizar Tabela">
+        </table>
+
+    </div>
+</body>
+
+<script src="./script/formulario.js"></script>
+
+
+
+</html>
