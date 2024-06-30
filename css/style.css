@@ -1,0 +1,34 @@
+.formulario {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+.subtitulo {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    width: 99%;
+    margin: 2px;
+    font-weight: bold;
+}
+
+.subtitulo_caixas {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    float: left;
+    width: 49%;
+    text-align: center;
+    margin: 2px;
+}
+
+.linhas_labels {
+    margin: 5px;
+}
+
+.linhas_campos {
+    margin: 5px;
+    clear: both;
+}
